@@ -1,9 +1,10 @@
 {
   "name": "express-api-postgresql",
-  "version": "1.0.0","main": "index.js",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "dev": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +17,16 @@
     "pg": "^8.16.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+    "jest": "^30.0.4",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oluloba/postgreSQL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Oluloba/postgreSQL/issues"
+  },
+  "homepage": "https://github.com/Oluloba/postgreSQL#readme"
 }

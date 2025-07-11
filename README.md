@@ -17,6 +17,11 @@ A simple RESTful API built with Express.js and PostgreSQL that supports basic CR
 - Environment variables support via `.env`
 
 ---
+### Project Structure
+- `index.js`: Main Express app
+- `routes/users.js`: All user-related routes and database logic
+- `db.js`: PostgreSQL connection using `pg.Pool`
+
 ⚫ API Endpoints
 All routes are prefixed with:
 
