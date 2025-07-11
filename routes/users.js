@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
       'INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *',
       [name, email]
     );
-    res.json(newUser.rows[0]);
+    res.status(201).json(newUser.rows[0]);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

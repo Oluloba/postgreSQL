@@ -17,6 +17,94 @@ A simple RESTful API built with Express.js and PostgreSQL that supports basic CR
 - Environment variables support via `.env`
 
 ---
+⚫ API Endpoints
+All routes are prefixed with:
+
+http://localhost:3000/api/users
+
+◻ 1. Create a New User
+Method: POST
+
+Endpoint: /api/users
+
+Request Body- select raw:
+{
+  "name": "John Doe",
+  "email": "johndoe@outlook.com"
+}
+Response (201 Created):
+
+{
+  "message": "User created successfully",
+    "user": {
+    "id": 3,
+    "name": "John Doe",
+    "email": "johndoe@outlook.com"
+}
+}
+◻ 2. Get All Users
+Method: GET
+
+Response (200 OK):
+
+[
+   {
+    "id": 1,
+    "name": "Champ",
+    "email": "champions@gmail.com"
+},
+  {
+    "id": 2,
+    "name": "Alice",
+    "email": "alice@example.com"
+},
+{
+    "id": 3,
+    "name": "John Doe",
+    "email": "johndoe@outlook.com"
+}
+]
+🔸 3. Get a Single User by ID
+Method: GET
+
+Example: /api/users/1
+
+Response (200 OK):
+
+{
+    "id": 1,
+    "name": "Champ",
+    "email": "champions@gmail.com"
+}
+
+🔸 4. Update a User by ID
+Method: PUT
+
+Example: /api/users/2
+
+Request Body:
+
+{
+  "name": "WhoamI ",
+  "email": "whoami@yahoo.com"
+}
+Response (200 OK):
+
+{
+  "message": "User updated successfully"
+}
+🔸 5. Delete a User by ID
+Method: DELETE
+
+Example: /api/users/1
+
+Response (200 OK):
+
+json
+Copy code
+{
+  "message": "User deleted successfully"
+}
 
 ## Required
 - PostgreSQL database
